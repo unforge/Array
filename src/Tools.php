@@ -32,6 +32,18 @@ final class Tools
     }
 
     /**
+     * Check on empty array
+     *
+     * @param array $array
+     *
+     * @return bool
+     */
+    public static function isEmpty(array $array) : bool
+    {
+        return (bool) empty($array);
+    }
+
+    /**
      * Return INT value from array
      *
      * @param array $array

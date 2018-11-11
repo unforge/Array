@@ -19,6 +19,19 @@ namespace Unforge\ArrayToolkit;
 final class Tools
 {
     /**
+     * Check exist key in array
+     *
+     * @param array $array
+     * @param static|int $key
+     *
+     * @return bool
+     */
+    public static function checkExistKeyInArray(array $array, $key) : bool
+    {
+        return (bool) isset($array[$key]);
+    }
+
+    /**
      * Return INT value from array
      *
      * @param array $array
@@ -154,6 +167,26 @@ final class Tools
 
         if ($array[$key] ?? 0) {
             return $array[$key];
+        }
+
+        return $default;
+    }
+
+    /**
+     * Return JSON ARRAY from array
+     *
+     * @param array $array
+     * @param string|int $key
+     * @param array $default
+     *
+     * @return array
+     */
+    public static function getJsonArray(array $array, $key, array $default = []) : array
+    {
+        $key = (string) $key;
+
+        if ($array[$key] ?? 0) {
+            return @json_decode($array[$key], true) ?? [];
         }
 
         return $default;

@@ -9,20 +9,20 @@
  * @license http://opensource.org/licenses/MIT MIT
  */
 
-namespace Unforge\ArrayToolkit;
+namespace Unforge\Toolkit;
 
 /**
- * Class Tools
+ * Class Arr
  *
- * @package Unforge\ArrayToolkit
+ * @package Unforge\Toolkit
  */
-final class Tools
+class Arr
 {
     /**
      * Check exist key in array
      *
      * @param array $array
-     * @param static|int $key
+     * @param string|int $key
      *
      * @return bool
      */
